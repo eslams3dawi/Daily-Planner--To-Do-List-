@@ -56,14 +56,10 @@ public class Main extends JFrame implements ActionListener
 	 SwitchButton1.setBounds(450, 425, 400, 150);
 	 SwitchButton1.setText("Start Planning.");
 	 SwitchButton1.setFont(new Font("MV Boli",Font.BOLD ,40));
-//	 SwitchButton1.setBackground(Color.white);
-	 SwitchButton1.setBackground(new Color(0,0,0,0));
-//	 SwitchButton1.setFocusable(false);
+	// SwitchButton1.setBackground(new Color(0,0,0,0));
+	 SwitchButton1.setBackground(Color.white);
+	 SwitchButton1.setFocusable(false);
 //	 SwitchButton1.setBorderPainted(false);
-//	 SwitchButton1.setFocusPainted(false);
-//	 SwitchButton1.setContentAreaFilled(false);
-//	 SwitchButton1.setOpaque(false);
-//	 SwitchButton1.setCursor(Cursor.getDefaultCursor());
 
 	 SwitchButton1.addActionListener(this);
 	 
