@@ -28,7 +28,7 @@ public class Main extends JFrame implements ActionListener
 	 public Main()
 	{
 	 //Frame.
-	 this.setSize(1200, 700);
+	 this.setSize(1400, 800);
 	 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	 this.setLocationRelativeTo(null);
 	 //Card Layout.

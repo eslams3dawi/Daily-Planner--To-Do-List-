@@ -18,6 +18,25 @@ import javax.swing.border.Border;
 
 //JTextField = a GUI textbox component that can be used to add,set or get text.
 
+//for the start panel
+ //add label image for the start panel
+ //for all buttons, change the foreground color button & dimensions
+
+//for the taskNumberPanel
+ //next even if there is no tasks
+ //the default no.tasks is 5
+ //absolute instead of flow layout
+ //add previous button
+ //limit the no.tasks
+
+//for the planner panel
+ //once start over, suppose delete the old tasks
+ //wedensday has no color
+ //add previous button
+ //can delete task
+
+
+
 public class TaskNumberPanel extends JPanel implements ActionListener //this frame now can listen to events.
                                                                      //"Action listener interface" exists at java.awt.event library.
 {

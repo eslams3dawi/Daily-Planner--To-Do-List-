@@ -31,7 +31,7 @@ public class StartPanel extends JPanel // The First panel.
 		 
 		 ImageTwo = new JLabel();
 		 ImageIcon Image =new ImageIcon("photo_2025-04-18_20-20-51.jpg");
-		 ImageTwo.setBounds(700,90,700,600);
+		 ImageTwo.setBounds(810,90,700,600);
 		 ImageTwo.setIcon(Image);
 		 
 		 Welcome = new JLabel ();
@@ -43,6 +43,7 @@ public class StartPanel extends JPanel // The First panel.
 		 
 		 this.add(Welcome);
 		 this.add(ImageOne);
-		 this.add(ImageTwo);		 
+		 this.add(ImageTwo);		
+		 //repaint
 	}
 }
