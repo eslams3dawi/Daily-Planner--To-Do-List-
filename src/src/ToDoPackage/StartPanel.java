@@ -15,8 +15,7 @@ import javax.swing.JPanel;
 //JButton = a GUI button that performs an action when clicked on.
 
 public class StartPanel extends JPanel // The First panel.
-{
-	
+{	
 	JButton StartButton;
 	JLabel Welcome;// Welcome To Your Daily Planner
 	JLabel ImageOne;// to add icon.
@@ -44,9 +43,10 @@ public class StartPanel extends JPanel // The First panel.
 		 Welcome.setFont(new Font("MV Boli",Font.PLAIN ,50));
 		 Welcome.setForeground(Color.WHITE);// color of font .
 		 
+		 this.add(Welcome, 0);	
+		 
 		 img.setSize(1400,800);
 		 img.setLocation(0,0);
 		 this.add(img, -1);
-		 this.add(Welcome, 0);		 
 	}
 }

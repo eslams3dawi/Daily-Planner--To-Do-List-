@@ -25,7 +25,7 @@ public class Main extends JFrame implements ActionListener
 	TaskNumberPanel tasknumberPanel; 
 	Planner planner;
 	JButton SwitchButton1;
-	JButton SwitchButton2;
+	static JButton SwitchButton2;
 	JButton SwitchButton3;
 	
 //    private Timer RefreshGUI;
@@ -56,11 +56,8 @@ public class Main extends JFrame implements ActionListener
 	 SwitchButton1.setBounds(450, 425, 400, 150);
 	 SwitchButton1.setText("Start Planning.");
 	 SwitchButton1.setFont(new Font("MV Boli",Font.BOLD ,40));
-	// SwitchButton1.setBackground(new Color(0,0,0,0));
 	 SwitchButton1.setBackground(Color.white);
 	 SwitchButton1.setFocusable(false);
-//	 SwitchButton1.setBorderPainted(false);
-
 	 SwitchButton1.addActionListener(this);
 	 
 	 SwitchButton2 = new JButton();
@@ -70,7 +67,6 @@ public class Main extends JFrame implements ActionListener
 	 SwitchButton2.setFocusable(false);
 	 SwitchButton2.addActionListener(this);
 	 SwitchButton2.setBackground(Color.white);
-	 
 	 SwitchButton2.setBounds(700, 600, 250, 100);
 	 
 	 SwitchButton3 = new JButton();
@@ -91,15 +87,15 @@ public class Main extends JFrame implements ActionListener
 	 container.add(planner,"p3");
 
 	 this.setVisible(true);
-	 this.repaint();
-
-		
+	 this.repaint();	
 	}
 
 	int CurrentPanel = 1;
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
+		 SwitchButton2.setCursor(Cursor.getDefaultCursor());
+		 SwitchButton2.setFocusable(false);
 		CurrentPanel++;
 		if(CurrentPanel>3)
 		{

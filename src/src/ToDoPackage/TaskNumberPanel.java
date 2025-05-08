@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -42,14 +43,18 @@ import javax.swing.border.Border;
 public class TaskNumberPanel extends JPanel implements ActionListener //this frame now can listen to events.
                                                                      //"Action listener interface" exists at java.awt.event library.
 {
+//	Border border = BorderFactory.createLineBorder(Color.cyan, 4);
+	
+	
 	private JLabel Label;//label.
 	private JTextField TaskCount;//text field to get number of tasks in.
 	private JButton ConfirmButton;//Button.
 	//defined out of constructor to be global for class.
 	
+	ImageIcon background = new ImageIcon("backgroundImg.jpg");
+	private JLabel img = new JLabel(new ImageIcon(background.getImage().getScaledInstance(1400, 800, Image.SCALE_SMOOTH)));
 	TaskNumberPanel()//constructor.
 	{
-		//this.setLayout(new FlowLayout());
 		this.setLayout(null);
 		this.setBackground(Color.BLACK);
 		
@@ -58,18 +63,16 @@ public class TaskNumberPanel extends JPanel implements ActionListener //this fra
 		Label.setForeground(Color.CYAN);//set font color of text.
 		Label.setFont(new Font("MV Boli",Font.PLAIN ,40));//set font of text + the last parameter is the size of text.
 		Label.setPreferredSize(new Dimension(700,200));
-		Border border = BorderFactory.createLineBorder(Color.cyan, 4);
-		Label.setBorder(border);
+		Label.setBorder(BorderFactory.createLineBorder(Color.cyan, 4));
 		
 		Label.setBounds(380, 200, 580, 100);
 		
 		TaskCount = new JTextField();
-		TaskCount.setPreferredSize(new Dimension(400,200));//x,y.
-		TaskCount.setBackground(Color.LIGHT_GRAY);
+//		TaskCount.setBackground(Color.LIGHT_GRAY);
 	    TaskCount.setForeground(Color.black);
 		TaskCount.setFont(new Font("MV Boli",Font.PLAIN ,40));
 		
-//		TaskCount.setBounds(500, 310, 300, 100);
+		TaskCount.setBounds(500, 310, 300, 100);
 		 
 		ConfirmButton = new JButton();
 		ConfirmButton.setText("Confirm");
@@ -77,13 +80,24 @@ public class TaskNumberPanel extends JPanel implements ActionListener //this fra
 		ConfirmButton.setBackground(Color.WHITE);
 		ConfirmButton.setForeground(Color.black);
 		ConfirmButton.setFont(new Font("MV Boli",Font.PLAIN ,40));
+
+		
+//		 SwitchButton2.setBounds(700, 600, 250, 100);   // edit it 
+
+		
 		ConfirmButton.addActionListener(this);
 		
 		ConfirmButton.setBounds(350, 600, 250, 100);
 		
-		this.add(Label);
-		this.add(TaskCount);
-		this.add(ConfirmButton);
+		 img.setSize(1400,800);
+		 img.setLocation(0,0);
+		 this.add(img, -1);
+		 
+		this.add(Label, 0);
+		this.add(TaskCount, 0);
+		this.add(ConfirmButton, 0);
+		
+
 	}
 	public int getTaskCount() 
 	{

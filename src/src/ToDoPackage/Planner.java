@@ -103,7 +103,7 @@ public class Planner extends JPanel implements ActionListener
 		 {
 			 this.setBackground(Color.cyan);
 		 }
-		 else if(SelectedDay == "Wedensday" )
+		 else if(SelectedDay == "Wednesday" )
 		 {
 			 this.setBackground(Color.DARK_GRAY);
 		 }
