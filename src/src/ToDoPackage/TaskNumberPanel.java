@@ -21,18 +21,18 @@ import javax.swing.border.Border;
 
 //for the start panel اسلام
  //add label image for the start panel 
- //for all buttons, change the background color button & dimensions 
+ //for all buttons, change the background color button & dimensions  done
 
 //for the taskNumberPanel اسلام
  //next even if there is no tasks اسر
  //Suppose there is no default no.tasks, the user must enter number to next اسر
- //absolute instead of flow layout 
+ //absolute instead of flow layout done
  //add previous button 
  //limit the no.tasks 
 
 //for the planner panel اسر
  //once start over, suppose delete the old tasks 
- //wedensday has no color 
+ //wedensday has no color done
  //add previous button 
  //can delete task 
 //using itemListener, on the checkBox, for striketThrough
@@ -74,14 +74,12 @@ public class TaskNumberPanel extends JPanel implements ActionListener //this fra
 		ConfirmButton.setBackground(Color.WHITE);
 		ConfirmButton.setForeground(Color.black);
 		ConfirmButton.setFont(new Font("MV Boli",Font.PLAIN ,40));
+		ConfirmButton.setBounds(350, 600, 250, 100);
+		ConfirmButton.addActionListener(this);
 
 		
 //		 SwitchButton2.setBounds(700, 600, 250, 100);   // edit it 
-
 		
-		ConfirmButton.addActionListener(this);
-		
-		ConfirmButton.setBounds(350, 600, 250, 100);
 		
 		 img.setSize(1400,800);
 		 img.setLocation(0,0);
@@ -97,10 +95,9 @@ public class TaskNumberPanel extends JPanel implements ActionListener //this fra
 	{
 	    try
 	    {
-	        return Integer.parseInt(TaskCount.getText());
-	        //Integer.parseInt = converts string into integer.
+	        return Integer.parseInt(TaskCount.getText());//Integer.parseInt = converts string into integer.
 	    } 
-	    catch (NumberFormatException e) //catch error.
+	    catch (NumberFormatException e)
 	    {
 	        return -1;
 	    }

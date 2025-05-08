@@ -1,4 +1,4 @@
-package   ToDoPackage;
+package  ToDoPackage;
 
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -30,6 +30,9 @@ public class Main extends JFrame implements ActionListener
 	JButton SwitchButton1;
 	static JButton SwitchButton2;
 	JButton SwitchButton3;
+	
+	JButton PreviousButton2;
+	JButton PreviousButton3;
 	
 //    private Timer RefreshGUI;
 	
@@ -77,15 +80,34 @@ public class Main extends JFrame implements ActionListener
 	 
 	 SwitchButton3 = new JButton();
 	 SwitchButton3.setBounds(50, 500, 160, 100);
-	 SwitchButton3.setText("Next");
+	 SwitchButton3.setText("Finish");
 	 SwitchButton3.setFont(new Font("MV Boli",Font.BOLD ,40));
 	 SwitchButton3.setFocusable(false);
 	 SwitchButton3.addActionListener(this);//when i click on the action happens.
+	 
+	 
+	 PreviousButton2 = new JButton();
+	 PreviousButton2.setBounds(50, 500, 160, 100);
+	 PreviousButton2.setText("Previous");
+	 PreviousButton2.setFont(new Font("MV Boli",Font.BOLD ,40));
+	 PreviousButton2.setFocusable(false);
+	 PreviousButton2.addActionListener(this);//when i click on the action happens.
+	 
+	 PreviousButton3 = new JButton();
+	 PreviousButton3.setBounds(50, 500, 160, 100);
+	 PreviousButton3.setText("Previous");
+	 PreviousButton3.setFont(new Font("MV Boli",Font.BOLD ,40));
+	 PreviousButton3.setFocusable(false);
+	 PreviousButton3.addActionListener(this);//when i click on the action happens.
 	  
 	 // Add the switch buttons to Panels.
 	 startpanel.add(SwitchButton1,0);
-	 tasknumberPanel.add(SwitchButton2);
-	 planner.add(SwitchButton3);
+	 tasknumberPanel.add(SwitchButton2, 0);
+	 planner.add(SwitchButton3, 0);
+	 
+	 tasknumberPanel.add(PreviousButton2, 0);
+	 planner.add(PreviousButton3, 0);
+	 
 	 
 	 //Add Panels to Frame.
 	 container.add(startpanel,"p1");
@@ -100,17 +122,31 @@ public class Main extends JFrame implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
-		CurrentPanel++;
-		if(CurrentPanel>3)
+		if(e.getSource() == SwitchButton1 || e.getSource() == SwitchButton2 || e.getSource() == SwitchButton3)
 		{
-			JOptionPane.showMessageDialog(this, "Start Over");
-			// parent,title ,message,type of mark.
-			//we can use color chooser method to set its color.
-			CurrentPanel = 1;
+			CurrentPanel++;
+			if(CurrentPanel>3)
+			{
+				JOptionPane.showMessageDialog(this, "Start Over");
+				// parent,title ,message,type of mark.
+				//we can use color chooser method to set its color.
+				CurrentPanel = 1;
+			}
+			cardlayout.show(container, "p"+ CurrentPanel);//how to get the next panel.	
 		}
-		cardlayout.show(container, "p"+ CurrentPanel);//how to get the next panel.	
+		if(e.getSource() == PreviousButton2 || e.getSource() == PreviousButton3)
+		{
+
+			CurrentPanel--;
+			if(CurrentPanel < 1)
+			{
+
+			}
+			cardlayout.show(container, "p"+ CurrentPanel);//how to get the next panel.	
+		}
 	}
 	
+
 	public static void main(String[] args) 
 	{
 		new Main();
