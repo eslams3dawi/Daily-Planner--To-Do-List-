@@ -69,7 +69,7 @@ public class TaskNumberPanel extends JPanel implements ActionListener //this fra
 	    TaskCount.setForeground(Color.black);
 		TaskCount.setFont(new Font("MV Boli",Font.PLAIN ,40));
 		
-		TaskCount.setBounds(500, 310, 300, 100);
+//		TaskCount.setBounds(500, 310, 300, 100);
 		 
 		ConfirmButton = new JButton();
 		ConfirmButton.setText("Confirm");

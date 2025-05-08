@@ -3,10 +3,12 @@ package   ToDoPackage;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.Cursor;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+//import java.util.Timer;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -25,6 +27,8 @@ public class Main extends JFrame implements ActionListener
 	JButton SwitchButton1;
 	JButton SwitchButton2;
 	JButton SwitchButton3;
+	
+//    private Timer RefreshGUI;
 	
 	 public Main()
 	{
@@ -46,13 +50,21 @@ public class Main extends JFrame implements ActionListener
 	 //Panel3.
 	 planner = new Planner();
 	 
+	 
 	 //Switch Buttons.
 	 SwitchButton1 = new JButton();
-	 SwitchButton1.setBounds(410, 425, 400, 150);
+	 SwitchButton1.setBounds(450, 425, 400, 150);
 	 SwitchButton1.setText("Start Planning.");
 	 SwitchButton1.setFont(new Font("MV Boli",Font.BOLD ,40));
-	 SwitchButton1.setBackground(Color.white);
-	 SwitchButton1.setFocusable(false);
+//	 SwitchButton1.setBackground(Color.white);
+	 SwitchButton1.setBackground(new Color(0,0,0,0));
+//	 SwitchButton1.setFocusable(false);
+//	 SwitchButton1.setBorderPainted(false);
+//	 SwitchButton1.setFocusPainted(false);
+//	 SwitchButton1.setContentAreaFilled(false);
+//	 SwitchButton1.setOpaque(false);
+//	 SwitchButton1.setCursor(Cursor.getDefaultCursor());
+
 	 SwitchButton1.addActionListener(this);
 	 
 	 SwitchButton2 = new JButton();
@@ -73,7 +85,7 @@ public class Main extends JFrame implements ActionListener
 	 SwitchButton3.addActionListener(this);//when i click on the action happens.
 	  
 	 // Add the switch buttons to Panels.
-	 startpanel.add(SwitchButton1);
+	 startpanel.add(SwitchButton1,0);
 	 tasknumberPanel.add(SwitchButton2);
 	 planner.add(SwitchButton3);
 	 
@@ -83,6 +95,8 @@ public class Main extends JFrame implements ActionListener
 	 container.add(planner,"p3");
 
 	 this.setVisible(true);
+	 this.repaint();
+
 		
 	}
 
