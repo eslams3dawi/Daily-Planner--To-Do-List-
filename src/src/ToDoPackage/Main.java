@@ -6,10 +6,13 @@ import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 //import java.util.Timer;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -17,7 +20,7 @@ import javax.swing.JOptionPane;
 public class Main extends JFrame implements ActionListener 
 {
 	//CardLayout = Layout manager allows to swap between components in the same window.
-   //              only one component is visable at a time. 
+   //              only one component is visible at a time. 
   //               this component here is panel.
 	CardLayout cardlayout;
 	Container container;//container of panels.
@@ -36,6 +39,10 @@ public class Main extends JFrame implements ActionListener
 	 this.setSize(1400, 800);
 	 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	 this.setLocationRelativeTo(null);
+	 
+	 ImageIcon icone = new ImageIcon("TaskIcon.png");
+	 this.setIconImage(icone.getImage());
+		
 	 //Card Layout.
 	 cardlayout = new CardLayout();
 	 container =  getContentPane();// get the content of frame.
@@ -49,7 +56,6 @@ public class Main extends JFrame implements ActionListener
 	 
 	 //Panel3.
 	 planner = new Planner();
-	 
 	 
 	 //Switch Buttons.
 	 SwitchButton1 = new JButton();
@@ -94,8 +100,6 @@ public class Main extends JFrame implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
-		 SwitchButton2.setCursor(Cursor.getDefaultCursor());
-		 SwitchButton2.setFocusable(false);
 		CurrentPanel++;
 		if(CurrentPanel>3)
 		{

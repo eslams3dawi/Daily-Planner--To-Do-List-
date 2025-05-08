@@ -42,10 +42,7 @@ import javax.swing.border.Border;
 
 public class TaskNumberPanel extends JPanel implements ActionListener //this frame now can listen to events.
                                                                      //"Action listener interface" exists at java.awt.event library.
-{
-//	Border border = BorderFactory.createLineBorder(Color.cyan, 4);
-	
-	
+{	
 	private JLabel Label;//label.
 	private JTextField TaskCount;//text field to get number of tasks in.
 	private JButton ConfirmButton;//Button.
@@ -64,14 +61,11 @@ public class TaskNumberPanel extends JPanel implements ActionListener //this fra
 		Label.setFont(new Font("MV Boli",Font.PLAIN ,40));//set font of text + the last parameter is the size of text.
 		Label.setPreferredSize(new Dimension(700,200));
 		Label.setBorder(BorderFactory.createLineBorder(Color.cyan, 4));
-		
 		Label.setBounds(380, 200, 580, 100);
 		
 		TaskCount = new JTextField();
-//		TaskCount.setBackground(Color.LIGHT_GRAY);
 	    TaskCount.setForeground(Color.black);
 		TaskCount.setFont(new Font("MV Boli",Font.PLAIN ,40));
-		
 		TaskCount.setBounds(500, 310, 300, 100);
 		 
 		ConfirmButton = new JButton();

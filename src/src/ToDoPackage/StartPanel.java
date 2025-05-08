@@ -17,17 +17,17 @@ import javax.swing.JPanel;
 public class StartPanel extends JPanel // The First panel.
 {	
 	JButton StartButton;
-	JLabel Welcome;// Welcome To Your Daily Planner
-	JLabel ImageOne;// to add icon.
-	JLabel ImageTwo;// icon.
+	JLabel Welcome;
+	JLabel ImageOne;
+	JLabel ImageTwo;
 	
-	ImageIcon background = new ImageIcon("backgroundImg.jpg");
-	private JLabel img = new JLabel(new ImageIcon(background.getImage().getScaledInstance(1400, 800, Image.SCALE_SMOOTH)));
+	ImageIcon backgroundPath = new ImageIcon("backgroundImg.jpg");
+	private JLabel img = new JLabel(new ImageIcon(backgroundPath.getImage().getScaledInstance(1400, 800, Image.SCALE_SMOOTH)));
 	 public StartPanel()
 	{
-		 this.setLayout(null);
-		 ImageOne = new JLabel();
+		 this.setLayout(null);//Absolute layout
 		 
+		 ImageOne = new JLabel();
 		 ImageIcon ImageOnePath =new ImageIcon("photo_2025-04-18_20-16-50.jpg");
 		 ImageOne.setBounds(900,500,510,510);
 		 ImageOne.setIcon(ImageOnePath);
