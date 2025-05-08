@@ -25,6 +25,8 @@ public class StartPanel extends JPanel // The First panel.
 		 this.setBackground(Color.black);
 		 ImageOne = new JLabel();
 		 
+		 ImageIcon background = new ImageIcon("backgroundImg.jpg");
+		 
 		 ImageIcon Imagex =new ImageIcon("photo_2025-04-18_20-16-50.jpg");
 		 ImageOne.setBounds(900,500,510,510);
 		 ImageOne.setIcon(Imagex);
@@ -44,6 +46,5 @@ public class StartPanel extends JPanel // The First panel.
 		 this.add(Welcome);
 		 this.add(ImageOne);
 		 this.add(ImageTwo);		
-		 //repaint
 	}
 }

@@ -1,6 +1,7 @@
 package   ToDoPackage;
 
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.Font;
@@ -46,21 +47,23 @@ public class Main extends JFrame implements ActionListener
 	 planner = new Planner();
 	 
 	 //Switch Buttons.
-
 	 SwitchButton1 = new JButton();
-	 SwitchButton1.setBounds(400, 300, 400, 200);
+	 SwitchButton1.setBounds(410, 425, 400, 150);
 	 SwitchButton1.setText("Start Planning.");
 	 SwitchButton1.setFont(new Font("MV Boli",Font.BOLD ,40));
-	 //To-Do1: add background & foreground color 
+	 SwitchButton1.setBackground(Color.white);
 	 SwitchButton1.setFocusable(false);
 	 SwitchButton1.addActionListener(this);
 	 
 	 SwitchButton2 = new JButton();
 	 SwitchButton2.setBounds(300, 300, 500, 600);
-	 SwitchButton2.setText("Next.");
+	 SwitchButton2.setText("Next");
 	 SwitchButton2.setFont(new Font("MV Boli",Font.BOLD ,40));
 	 SwitchButton2.setFocusable(false);
 	 SwitchButton2.addActionListener(this);
+	 SwitchButton2.setBackground(Color.white);
+	 
+	 SwitchButton2.setBounds(700, 600, 250, 100);
 	 
 	 SwitchButton3 = new JButton();
 	 SwitchButton3.setBounds(50, 500, 160, 100);
@@ -71,7 +74,7 @@ public class Main extends JFrame implements ActionListener
 	  
 	 // Add the switch buttons to Panels.
 	 startpanel.add(SwitchButton1);
-	 tasknumberPanel .add(SwitchButton2);
+	 tasknumberPanel.add(SwitchButton2);
 	 planner.add(SwitchButton3);
 	 
 	 //Add Panels to Frame.
@@ -84,7 +87,6 @@ public class Main extends JFrame implements ActionListener
 	}
 
 	int CurrentPanel = 1;
-	
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
@@ -96,20 +98,11 @@ public class Main extends JFrame implements ActionListener
 			//we can use color chooser method to set its color.
 			CurrentPanel = 1;
 		}
-		cardlayout.show(container, "p"+ CurrentPanel);//how to get the next panel.
-	
-		
+		cardlayout.show(container, "p"+ CurrentPanel);//how to get the next panel.	
 	}
-	
-	
 	
 	public static void main(String[] args) 
 	{
-		
-		
 		new Main();
-		
-
 	}
-
 }

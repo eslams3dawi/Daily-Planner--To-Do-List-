@@ -18,24 +18,26 @@ import javax.swing.border.Border;
 
 //JTextField = a GUI textbox component that can be used to add,set or get text.
 
-//for the start panel
- //add label image for the start panel
- //for all buttons, change the foreground color button & dimensions
+//for the start panel اسلام
+ //add label image for the start panel 
+ //for all buttons, change the background color button & dimensions 
 
-//for the taskNumberPanel
- //next even if there is no tasks
- //the default no.tasks is 5
- //absolute instead of flow layout
- //add previous button
- //limit the no.tasks
+//for the taskNumberPanel اسلام
+ //next even if there is no tasks اسر
+ //Suppose there is no default no.tasks, the user must enter number to next اسر
+ //absolute instead of flow layout 
+ //add previous button 
+ //limit the no.tasks 
 
-//for the planner panel
- //once start over, suppose delete the old tasks
- //wedensday has no color
- //add previous button
- //can delete task
+//for the planner panel اسر
+ //once start over, suppose delete the old tasks 
+ //wedensday has no color 
+ //add previous button 
+ //can delete task 
+//using itemListener, on the checkBox, for striketThrough
 
-
+//Progress bar اسماء
+ //once the taks's checkbox is selected, the progress bar increase
 
 public class TaskNumberPanel extends JPanel implements ActionListener //this frame now can listen to events.
                                                                      //"Action listener interface" exists at java.awt.event library.
@@ -47,30 +49,37 @@ public class TaskNumberPanel extends JPanel implements ActionListener //this fra
 	
 	TaskNumberPanel()//constructor.
 	{
-		this.setLayout(new FlowLayout());
+		//this.setLayout(new FlowLayout());
+		this.setLayout(null);
 		this.setBackground(Color.BLACK);
 		
 		Label= new JLabel();
-		Label.setText("How Many Tasks for today?");
+		Label.setText(" How Many Tasks for today?");
 		Label.setForeground(Color.CYAN);//set font color of text.
 		Label.setFont(new Font("MV Boli",Font.PLAIN ,40));//set font of text + the last parameter is the size of text.
 		Label.setPreferredSize(new Dimension(700,200));
 		Border border = BorderFactory.createLineBorder(Color.cyan, 4);
 		Label.setBorder(border);
 		
+		Label.setBounds(380, 200, 580, 100);
+		
 		TaskCount = new JTextField();
 		TaskCount.setPreferredSize(new Dimension(400,200));//x,y.
 		TaskCount.setBackground(Color.LIGHT_GRAY);
 	    TaskCount.setForeground(Color.black);
 		TaskCount.setFont(new Font("MV Boli",Font.PLAIN ,40));
+		
+		TaskCount.setBounds(500, 310, 300, 100);
 		 
 		ConfirmButton = new JButton();
 		ConfirmButton.setText("Confirm");
 		ConfirmButton.setPreferredSize(new Dimension(500,100));
-		ConfirmButton.setBackground(Color.LIGHT_GRAY);
+		ConfirmButton.setBackground(Color.WHITE);
 		ConfirmButton.setForeground(Color.black);
 		ConfirmButton.setFont(new Font("MV Boli",Font.PLAIN ,40));
 		ConfirmButton.addActionListener(this);
+		
+		ConfirmButton.setBounds(350, 600, 250, 100);
 		
 		this.add(Label);
 		this.add(TaskCount);
@@ -101,7 +110,6 @@ public class TaskNumberPanel extends JPanel implements ActionListener //this fra
     }
 	else
 	{
-		
 		 JOptionPane.showMessageDialog(this, "OK Now you can start .Wishing you a productive day.");	
 	}
  }

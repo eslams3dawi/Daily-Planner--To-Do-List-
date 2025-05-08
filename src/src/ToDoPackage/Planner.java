@@ -69,7 +69,7 @@ public class Planner extends JPanel implements ActionListener
 	    SecondPanel.setLayout(new GridLayout(5, 2, 10, 10));
 	    //TaskNumberPanel TaskNumber = new TaskNumberPanel();
 	    //int count = TaskNumber.getTaskCount();
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < 10; i++)
 		{
 		   JTextField taskField = new JTextField("Task " + (i + 1));
 		   JCheckBox taskCheck = new JCheckBox("Done");
