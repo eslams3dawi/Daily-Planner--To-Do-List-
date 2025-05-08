@@ -1,4 +1,4 @@
-package   xxxx;
+package   ToDoPackage;
 
 import java.awt.CardLayout;
 import java.awt.Container;
@@ -25,8 +25,6 @@ public class Main extends JFrame implements ActionListener
 	JButton SwitchButton2;
 	JButton SwitchButton3;
 	
-	           
-	 
 	 public Main()
 	{
 	 //Frame.

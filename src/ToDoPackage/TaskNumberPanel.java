@@ -1,4 +1,4 @@
-package xxxx;
+package ToDoPackage;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -36,29 +36,26 @@ public class TaskNumberPanel extends JPanel implements ActionListener //this fra
 		Label.setForeground(Color.CYAN);//set font color of text.
 		Label.setFont(new Font("MV Boli",Font.PLAIN ,40));//set font of text + the last parameter is the size of text.
 		Label.setPreferredSize(new Dimension(700,200));
-		Border border =BorderFactory.createLineBorder(Color.cyan, 4);
+		Border border = BorderFactory.createLineBorder(Color.cyan, 4);
 		Label.setBorder(border);
 		
-		
-		 TaskCount = new JTextField();
-		 TaskCount.setPreferredSize(new Dimension(400,200));//x,y.
-		 TaskCount.setBackground(Color.LIGHT_GRAY);
-		 TaskCount.setForeground(Color.black);
-		 TaskCount.setFont(new Font("MV Boli",Font.PLAIN ,40));
+		TaskCount = new JTextField();
+		TaskCount.setPreferredSize(new Dimension(400,200));//x,y.
+		TaskCount.setBackground(Color.LIGHT_GRAY);
+	    TaskCount.setForeground(Color.black);
+		TaskCount.setFont(new Font("MV Boli",Font.PLAIN ,40));
 		 
 		ConfirmButton = new JButton();
 		ConfirmButton.setText("Confirm");
-		ConfirmButton.setPreferredSize(new Dimension(300,100));
+		ConfirmButton.setPreferredSize(new Dimension(500,100));
 		ConfirmButton.setBackground(Color.LIGHT_GRAY);
 		ConfirmButton.setForeground(Color.black);
 		ConfirmButton.setFont(new Font("MV Boli",Font.PLAIN ,40));
 		ConfirmButton.addActionListener(this);
 		
 		this.add(Label);
-		this.add( TaskCount);
+		this.add(TaskCount);
 		this.add(ConfirmButton);
-		
-		
 	}
 	public int getTaskCount() 
 	{
@@ -78,7 +75,7 @@ public class TaskNumberPanel extends JPanel implements ActionListener //this fra
 	public void actionPerformed(ActionEvent e)
 	{
 	int Count = getTaskCount();
-	if(Count<=0)
+	if(Count <= 0)
 	   
     {
         JOptionPane.showMessageDialog(this, "Error!!,Please enter a valid number of tasks.");
@@ -88,8 +85,5 @@ public class TaskNumberPanel extends JPanel implements ActionListener //this fra
 		
 		 JOptionPane.showMessageDialog(this, "OK Now you can start .Wishing you a productive day.");	
 	}
-}
-	
-	
-
+ }
 }

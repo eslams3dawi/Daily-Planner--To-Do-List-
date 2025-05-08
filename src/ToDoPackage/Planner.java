@@ -1,4 +1,4 @@
-package xxxx;
+package ToDoPackage;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -33,17 +33,18 @@ public class Planner extends JPanel implements ActionListener
 		this.setLayout(null);
 		this.setBackground(Color.gray);
 	
-
         // first Panel for week combo box.		
 		FirstPanel = new JPanel();
 		FirstPanel.setBackground(Color.black);
 		FirstPanel.setBounds(50, 40, 300, 200);
+		
 	    JLabel Label = new JLabel(); 
 	    Label.setText("Select The Day");
 	    Label.setForeground(Color.white);
 		Label.setFont(new Font("MV Boli",Font.PLAIN ,35));
+		
 		String[] days = {"Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"};
-		DayComboBox = new JComboBox (days);
+		DayComboBox = new JComboBox(days);
 		DayComboBox.setBounds(50, 20, 300, 40);
 		DayComboBox.addActionListener(this);
 		
@@ -52,11 +53,10 @@ public class Planner extends JPanel implements ActionListener
 		FirstPanel.setBounds(50,50,350,150);
 		this.add(FirstPanel);
 		
-		
 		//title panel for the second panel.
 		JPanel titlePanel = new JPanel();
 		titlePanel.setBackground(Color.black);
-		JLabel labelx = new JLabel("Enter your tasks");
+		JLabel labelx = new JLabel("All Your Tasks");
 		labelx.setForeground(Color.white);
 		labelx.setFont(new Font("MV Boli",Font.PLAIN ,20));
 		titlePanel.add(labelx);
@@ -67,17 +67,17 @@ public class Planner extends JPanel implements ActionListener
 		SecondPanel.setBackground(Color.black);
 		SecondPanel.setBounds(500, 90, 600, 600);
 	    SecondPanel.setLayout(new GridLayout(5, 2, 10, 10));
-		for (int i = 0; i <5; i++)
+	    //TaskNumberPanel TaskNumber = new TaskNumberPanel();
+	    //int count = TaskNumber.getTaskCount();
+		for (int i = 0; i < 5; i++)
 		{
 		   JTextField taskField = new JTextField("Task " + (i + 1));
 		   JCheckBox taskCheck = new JCheckBox("Done");
 
 		    SecondPanel.add(taskField);
 		    SecondPanel.add(taskCheck);
-		}
-		
+		}	
 		this.add(SecondPanel);			
-		
 	}
 	
 	@Override
@@ -114,12 +114,7 @@ public class Planner extends JPanel implements ActionListener
 		 else if(SelectedDay == "Friday" )
 		 {
 			 this.setBackground(Color.white);
-		 }
-		 
-		 
-		 
-	 }
-		
+		 } 
+	 }	
 	}
-
 }
