@@ -1,4 +1,4 @@
-package ToDoPackage;
+        package ToDoPackage;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -87,7 +87,7 @@ public class Planner extends JPanel implements ActionListener{
             public void actionPerformed(ActionEvent e){
                 JOptionPane.showMessageDialog(null, "Start Over");
                 Main.changecard("Welcome Panel");
-                setDefault();//has remove all method to clear and start again
+                setDefault();//has removeAll method to clear and start again
         }});	 
         
         BackButton.setBounds(40, 650, 250, 100);

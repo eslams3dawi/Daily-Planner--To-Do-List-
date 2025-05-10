@@ -11,6 +11,7 @@ public class Main extends JFrame{
 
 	static CardLayout cardlayout = new CardLayout(); //must be static, because the method that use it static
 	static Container container = new Container();
+	
 	StartPanel startpanel;
 	public static TaskNumberPanel tasknumberPanel;
 	public static Planner planner = new Planner();
@@ -21,6 +22,7 @@ public class Main extends JFrame{
 		this.setTitle("Daily Planner");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
+		
 		ImageIcon icone = new ImageIcon("TaskIcon.png");
 		this.setIconImage(icone.getImage());
 

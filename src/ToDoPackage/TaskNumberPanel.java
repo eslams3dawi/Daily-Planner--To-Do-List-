@@ -4,13 +4,6 @@ import java.awt.event.*;
 import javax.swing.*;
 
 //JTextField = a GUI textbox component that can be used to add,set or get text.
-
-//for the start panel
-//for all buttons, change the background color button & dimensions  done
-//can delete task 
-//using itemListener, on the checkBox, for striketThrough
-
-//this frame now can listen to events.
 //"Action listener interface" exists at java.awt.event library.
 
 public class TaskNumberPanel extends JPanel implements ActionListener{
@@ -59,7 +52,7 @@ public class TaskNumberPanel extends JPanel implements ActionListener{
 		SwitchButton2.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e){
-				if(getTaskCount() != -1){
+				if(getTaskCount() > 0){
 					JOptionPane.showMessageDialog(null, "Wishing you a productive day.");//why null
 					Main.planner.GetDefault();
 					Main.changecard("Tasks Panel");
