@@ -4,12 +4,14 @@ A simple Java-based application for managing daily tasks and to-do lists. The ap
 
 ## Features
 
-* **Task Management**: Add and remove tasks.
-* **Task Planner**: Organize tasks in a daily planner view.
-* **Card Layout**: Use a `CardLayout` to switch between different views like the home screen, task list, and task planner.
-* **Task Details**: View detailed information about tasks.
+* - ✅ **Task Management**: Choose number of tasks to add.
+* - 📅 **Task Planner**: Organize tasks in a daily planner view.
+* - 💡 **Progress Tracker**: Track completed tasks with a live progress bar.
+* - 🔁 **Card Layout**: Use a `CardLayout` to switch between different views like the home screen, task list, and task planner.
+* - 📋 **Task Details**: View detailed information about tasks.
 
-## Screenshots
+## Screenshots[To-Do List.pdf](https://github.com/user-attachments/files/20148686/To-Do.List.pdf)
+
 
 
 ### Prerequisites
