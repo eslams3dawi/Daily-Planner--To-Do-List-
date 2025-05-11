@@ -34,21 +34,58 @@ public class TaskNumberPanel extends JPanel implements ActionListener{
 		TaskCount.setFont(new Font("MV Boli",Font.PLAIN ,40));
 		TaskCount.setBounds(500, 310, 300, 100);
 		
-		ConfirmButton = new JButton();
-		ConfirmButton.setText("Confirm");
-		ConfirmButton.setPreferredSize(new Dimension(500,100));
-		ConfirmButton.setBackground(Color.WHITE);
-		ConfirmButton.setForeground(Color.black);
-		ConfirmButton.setFont(new Font("MV Boli",Font.PLAIN ,40));
+		
+        JButton ConfirmButton = new JButton("Confirm") {
+            @Override	
+            protected void paintComponent(Graphics g) {
+                Graphics2D g2 = (Graphics2D) g.create();
+                GradientPaint gp = new GradientPaint(0, 0, new Color(255, 204, 102),
+                                                     getWidth(), getHeight(), new Color(102, 204, 255));
+                g2.setPaint(gp);
+                g2.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
+                super.paintComponent(g);
+                g2.dispose();
+            }
+        };
+        ConfirmButton.setFont(new Font("Comic Sans MS", Font.BOLD, 28));
+        ConfirmButton.setForeground(Color.BLACK);
+        ConfirmButton.setFocusPainted(false);
+        ConfirmButton.setBorderPainted(false);
+        ConfirmButton.setContentAreaFilled(false);
+        ConfirmButton.setOpaque(false);
+        ConfirmButton.setCursor(Cursor.getDefaultCursor());  
 		ConfirmButton.setBounds(350, 600, 250, 100);
 		ConfirmButton.addActionListener(this);
 		
-		SwitchButton2.setBounds(300, 300, 500, 600);
-		SwitchButton2.setText("Next");
-		SwitchButton2.setFont(new Font("MV Boli",Font.BOLD ,40));
-		SwitchButton2.setFocusable(false);
-		SwitchButton2.setBackground(Color.white);
-		SwitchButton2.setBounds(700, 600, 250, 100);
+//		ConfirmButton = new JButton();
+//		ConfirmButton.setText("Confirm");
+//		ConfirmButton.setPreferredSize(new Dimension(500,100));
+//		ConfirmButton.setBackground(Color.WHITE);
+//		ConfirmButton.setForeground(Color.black);
+//		ConfirmButton.setFont(new Font("MV Boli",Font.PLAIN ,40));
+//		ConfirmButton.setBounds(350, 600, 250, 100);
+//		ConfirmButton.addActionListener(this);
+		
+        JButton SwitchButton2 = new JButton("Next") {
+            @Override	
+            protected void paintComponent(Graphics g) {
+                Graphics2D g2 = (Graphics2D) g.create();
+                GradientPaint gp = new GradientPaint(0, 0, new Color(255, 204, 102),
+                                                     getWidth(), getHeight(), new Color(102, 204, 255));
+                g2.setPaint(gp);
+                g2.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
+                super.paintComponent(g);
+                g2.dispose();
+            }
+        };
+        SwitchButton2.setFont(new Font("Comic Sans MS", Font.BOLD, 28));
+        SwitchButton2.setForeground(Color.BLACK);
+        SwitchButton2.setFocusPainted(false);
+        SwitchButton2.setBorderPainted(false);
+        SwitchButton2.setContentAreaFilled(false);
+        SwitchButton2.setOpaque(false);
+        SwitchButton2.setCursor(Cursor.getDefaultCursor());  
+        SwitchButton2.setBounds(700, 600, 250, 100);
 		SwitchButton2.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e){
@@ -59,7 +96,8 @@ public class TaskNumberPanel extends JPanel implements ActionListener{
 				}
 				else
 					JOptionPane.showMessageDialog(null, "Error!!,Please enter a valid number of tasks.");
-		}});	 	 
+		}});	
+ 	 
 		PreviousButton2 = new JButton();
 		PreviousButton2.setBounds(40, 650, 250, 100);
 		PreviousButton2.setText("Back");

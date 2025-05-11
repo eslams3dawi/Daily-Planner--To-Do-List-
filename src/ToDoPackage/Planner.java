@@ -1,4 +1,4 @@
-        package ToDoPackage;
+package ToDoPackage;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -78,17 +78,36 @@ public class Planner extends JPanel implements ActionListener{
         Bar.setStringPainted(true);	
         this.add(ScrollPane);  
         
+        
+        JButton FinishButton = new JButton("Finish") {
+            @Override	
+            protected void paintComponent(Graphics g) {
+                Graphics2D g2 = (Graphics2D) g.create();
+                GradientPaint gp = new GradientPaint(0, 0, new Color(255, 204, 102),
+                                                     getWidth(), getHeight(), new Color(102, 204, 255));
+                g2.setPaint(gp);
+                g2.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
+                super.paintComponent(g);
+                g2.dispose();
+            }
+        };
+        FinishButton.setFont(new Font("Comic Sans MS", Font.BOLD, 28));
+        FinishButton.setForeground(Color.BLACK);
+        FinishButton.setFocusPainted(false);
+        FinishButton.setBorderPainted(false);
+        FinishButton.setContentAreaFilled(false);
+        FinishButton.setOpaque(false);
+        FinishButton.setCursor(Cursor.getDefaultCursor());  
+        FinishButton.setBounds(350, 600, 250, 100);
+        FinishButton.addActionListener(this);
         FinishButton.setBounds(1200, 650, 160, 100);
-        FinishButton.setBackground(Color.WHITE);
-        FinishButton.setFont(new Font("MV Boli",Font.BOLD ,40));
-        FinishButton.setFocusable(false);
         FinishButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
                 JOptionPane.showMessageDialog(null, "Start Over");
                 Main.changecard("Welcome Panel");
                 setDefault();//has removeAll method to clear and start again
-        }});	 
+        }});	
         
         BackButton.setBounds(40, 650, 250, 100);
         BackButton.setBackground(Color.WHITE);

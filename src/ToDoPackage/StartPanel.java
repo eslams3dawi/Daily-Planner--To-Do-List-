@@ -22,11 +22,27 @@ public class StartPanel extends JPanel{    // The First panel.
         Welcome.setFont(new Font("MV Boli",Font.PLAIN ,50));
         Welcome.setForeground(Color.WHITE);// color of font .
         
+        
+        JButton StartButton = new JButton("Start Planning") {
+            @Override	
+            protected void paintComponent(Graphics g) {
+                Graphics2D g2 = (Graphics2D) g.create();
+                GradientPaint gp = new GradientPaint(0, 0, new Color(255, 204, 102),
+                                                     getWidth(), getHeight(), new Color(102, 204, 255));
+                g2.setPaint(gp);
+                g2.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
+                super.paintComponent(g);
+                g2.dispose();
+            }
+        };
+        StartButton.setFont(new Font("Comic Sans MS", Font.BOLD, 28));
+        StartButton.setForeground(Color.BLACK);
+        StartButton.setFocusPainted(false);
+        StartButton.setBorderPainted(false);
+        StartButton.setContentAreaFilled(false);
+        StartButton.setOpaque(false);
+        StartButton.setCursor(Cursor.getDefaultCursor());  
         StartButton.setBounds(450, 425, 400, 150);
-        StartButton.setText("Start Planning.");
-        StartButton.setFont(new Font("MV Boli",Font.BOLD ,40));
-        StartButton.setBackground(Color.white);
-        StartButton.setFocusable(false);
 
         this.add(StartButton);
         this.add(Welcome);
